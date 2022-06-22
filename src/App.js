@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import IndexCountriesPage from './pages/indexAllCountriesPage/IndexCountriesPage';
+import IndexCountryPage from './pages/indexCountryPage/IndexCountryPage';
+import * as C from './layout/Layout.styled';
+import { ThemeProvider } from 'styled-components';
+import { darkTheme, lightTheme, GlobalStyles } from './Theme';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={lightTheme}>
+        <GlobalStyles />
+        <C.Header />
+        <Router>
+          <Routes>
+            <Route path='/' element={<IndexCountriesPage />} />
+            <Route path='/country' element={<IndexCountryPage />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
+    </>
   );
 }
 
