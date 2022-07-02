@@ -14,9 +14,12 @@ export const lightTheme = {
   text: 'hsl(200, 15%, 8%)',
   element: 'hsl(0, 0%, 100%)',
   input: 'hsl(0, 0%, 52%)',
+  boxShadow: '0.5px 0.5px 10px gray',
 };
+
 export const darkTheme = {
   background: 'hsl(207, 26%, 17%)',
   text: 'hsl(0, 0%, 100%)',
   element: 'hsl(209, 23%, 22%)',
+  boxShadow: '0.5px 0.5px 10px hsl(209, 23%, 22%)',
 };

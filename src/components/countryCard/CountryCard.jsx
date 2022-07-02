@@ -3,9 +3,8 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   width: 240px;
-  box-shadow: 0.5px 0.5px 2px gray;
+  box-shadow: ${({ theme }) => theme.boxShadow};
   border-radius: 5px;
-
   .image--div {
     width: 100%;
     height: 140px;
@@ -20,9 +19,14 @@ export const CardContainer = styled.div`
 
   .content--div {
     padding: 1.5rem 1rem 2rem 1rem;
+    background-color: ${({ theme }) => theme.element};
+    color: ${({ theme }) => theme.text};
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
     h1 {
       font-size: 1.3rem;
+      font-weight: 800;
       margin-bottom: 0.7rem;
     }
 

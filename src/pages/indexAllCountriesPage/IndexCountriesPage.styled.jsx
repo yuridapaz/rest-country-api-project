@@ -23,14 +23,31 @@ export const FilterContainer = styled.div`
 export const Input = styled.input`
   width: 25rem;
   padding: 0.9rem;
-  /* border: none; */
+  border: none;
+  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme }) => theme.element};
   border-radius: 5px;
+  &:focus {
+    outline: none;
+  }
+  ::placeholder,
+  ::-webkit-input-placeholder {
+    color: ${({ theme }) => theme.text};
+  }
+  :-ms-input-placeholder {
+    color: ${({ theme }) => theme.text};
+  }
 `;
 
 export const Select = styled.select`
   padding: 0.9rem;
   border-radius: 5px;
   border: none;
+  color: ${({ theme }) => theme.text};
+  background-color: ${({ theme }) => theme.element};
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const SelectForm = () => {
