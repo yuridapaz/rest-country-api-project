@@ -18,6 +18,7 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderButton = styled.button`
+  cursor: pointer;
   background: none;
   border: none;
   padding: 0.6rem;
@@ -31,11 +32,11 @@ export const HeaderButton = styled.button`
   }
 `;
 
-export const Header = () => {
+export const Header = ({ onClick }) => {
   return (
     <HeaderContainer>
       <h1 className='page-title'>Where in the world ?</h1>
-      <HeaderButton>
+      <HeaderButton onClick={onClick}>
         <RiMoonLine className='moon-icon' /> Dark mode
       </HeaderButton>
     </HeaderContainer>
