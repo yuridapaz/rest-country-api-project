@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { RiMoonLine } from 'react-icons/ri';
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -9,7 +10,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0.5px 0.5px 10px gray;
+  box-shadow: ${({ theme }) => theme.boxShadow};
   position: fixed;
   .page-title {
     font-size: 1.7rem;
@@ -17,20 +18,26 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderButton = styled.button`
+  cursor: pointer;
   background: none;
   border: none;
   padding: 0.6rem;
-
-  .btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${({ theme }) => theme.text};
+  .moon-icon {
+    margin-right: 0.5rem;
+    font-size: 1.05rem;
   }
 `;
 
-export const Header = () => {
+export const Header = ({ onClick }) => {
   return (
     <HeaderContainer>
       <h1 className='page-title'>Where in the world ?</h1>
-      <HeaderButton>
-        <span>ICON</span> Dark mode
+      <HeaderButton onClick={onClick}>
+        <RiMoonLine className='moon-icon' /> Dark mode
       </HeaderButton>
     </HeaderContainer>
   );

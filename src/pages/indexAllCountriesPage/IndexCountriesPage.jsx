@@ -18,21 +18,19 @@ function IndexCountriesPage() {
   }, []);
 
   return (
-    <>
-      <C.Body>
-        <C.Cointainer>
-          <C.FilterContainer>
-            <C.Input type='text' placeholder='Search for a country...' />
-            <C.SelectForm />
-          </C.FilterContainer>
-          <C.CardsContainer>
-            {countries.map((country, i) => {
-              return <CountryCard country={country} key={i} />;
-            })}
-          </C.CardsContainer>
-        </C.Cointainer>
-      </C.Body>
-    </>
+    <C.Body>
+      <C.Cointainer>
+        <C.FilterContainer>
+          <C.Input type='text' placeholder='Search for a country...' />
+          <C.SelectForm />
+        </C.FilterContainer>
+        <C.CardsContainer>
+          {countries.map((country, i) => {
+            return <CountryCard country={country} key={i} />;
+          })}
+        </C.CardsContainer>
+      </C.Cointainer>
+    </C.Body>
   );
 }
 
