@@ -20,8 +20,8 @@ Your users should be able to:
 - [x] Use styled-compnents
 - [x] Show all countries from the API
 - [ ] Search for a country name using an `input`
-- [ ] Set a filter type with countries region
+- [ ] Set a select field that filter countries by region
 - [ ] Create a detailed page with a clicked country information
 - [ ] Create a detailed page with a clicked border country information
 - [ ] Set a Light/Dark theme mode
-- [ ] Create a resposive design
+- [ ] Create a responsive design
