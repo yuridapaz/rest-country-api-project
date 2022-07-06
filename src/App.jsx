@@ -21,7 +21,7 @@ function App() {
         <Router>
           <Routes>
             <Route path='/' element={<IndexCountriesPage />} />
-            <Route path='/country' element={<IndexCountryPage />} />
+            <Route path='/country/:countryName' element={<IndexCountryPage />} />
           </Routes>
         </Router>
       </ThemeProvider>
