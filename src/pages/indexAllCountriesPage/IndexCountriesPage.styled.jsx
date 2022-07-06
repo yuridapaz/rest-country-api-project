@@ -50,21 +50,21 @@ export const Select = styled.select`
   }
 `;
 
-export const SelectForm = () => {
-  return (
-    <Select>
-      <option value='' hidden>
-        Filter by Region
-      </option>
-      <option value='africa'>None</option>
-      <option value='africa'>Africa</option>
-      <option value='america'>América</option>
-      <option value='asia'>Asia</option>
-      <option value='europe'>Europe</option>
-      <option value='oceania'>Oceania</option>
-    </Select>
-  );
-};
+// export const SelectForm = () => {
+//   return (
+//     <Select>
+//       <option value='' hidden>
+//         Filter by Region
+//       </option>
+//       <option value='africa'>None</option>
+//       <option value='africa'>Africa</option>
+//       <option value='america'>América</option>
+//       <option value='asia'>Asia</option>
+//       <option value='europe'>Europe</option>
+//       <option value='oceania'>Oceania</option>
+//     </Select>
+//   );
+// };
 
 export const CardsContainer = styled.div`
   display: grid;

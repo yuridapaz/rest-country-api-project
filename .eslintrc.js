@@ -3,15 +3,25 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 'latest',
+    ecmaVersion: 13,
     sourceType: 'module',
   },
-  plugins: ['react'],
-  rules: {},
-  quotes: [2, 'single', 'avoid-escape'],
+  plugins: ['react-hooks', 'react'],
+  rules: {
+    'react/prop-types': [0],
+    quotes: ['error', 'single'],
+    semi: [1],
+
+    indent: ['error', 2],
+  },
 };
