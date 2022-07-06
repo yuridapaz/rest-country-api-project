@@ -12,6 +12,10 @@ export const Cointainer = styled.div`
   max-width: 1280px;
   padding: 2rem;
   margin-top: 3.5rem;
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
 `;
 
 export const FilterContainer = styled.div`
