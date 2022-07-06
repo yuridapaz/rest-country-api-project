@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { countriesClient as getCountriesClient } from '../../services/CountriesClient';
 import * as C from './IndexCountriesPage.styled';
 import CountryCard from '../../components/countryCard/CountryCard';
+import IndexCountryPage from '../indexCountryPage/IndexCountryPage';
 
 function IndexCountriesPage() {
   const countriesClient = getCountriesClient();
@@ -49,7 +51,11 @@ function IndexCountriesPage() {
         </C.FilterContainer>
         <C.CardsContainer>
           {countries.filter(searchingCountryOrRegion).map((country, i) => {
-            return <CountryCard country={country} key={i} />;
+            return (
+              <Link key={i} to={`country/${country.name.common}`} element={<IndexCountryPage />}>
+                <CountryCard country={country} key={i} />
+              </Link>
+            );
           })}
         </C.CardsContainer>
       </C.Cointainer>
@@ -58,3 +64,14 @@ function IndexCountriesPage() {
 }
 
 export default IndexCountriesPage;
+
+{
+  /* <Link
+to={`product/${product.code_color}`}
+element={<ProductPage productId={product.code_color} />}
+key={i}
+className='product__card__link'
+>
+<ProductCard product={product} />
+</Link> */
+}
