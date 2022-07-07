@@ -17,6 +17,11 @@ export const Body = styled.div`
     flex-direction: column;
     padding: 1rem;
   }
+
+  @media only screen and (max-width: 768px) {
+    align-items: flex-start;
+    padding-top: 4rem;
+  }
 `;
 
 export const ReturnButton = styled.button`
@@ -24,10 +29,22 @@ export const ReturnButton = styled.button`
   width: 120px;
   padding: 0.5rem;
   margin-bottom: 4rem;
-  box-shadow: ${({ theme }) => theme.boxShadow};
+  box-shadow: 0.2px 0.2px 4px #3a4d5d;
+  background-color: ${({ theme }) => theme.element};
+  color: ${({ theme }) => theme.text};
   border-radius: 5px;
   border: none;
   outline: none;
+
+  @media only screen and (max-width: 768px) {
+    width: 100px;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  @media only screen and (max-width: 425px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const CountryDescriptionContainer = styled.div`
@@ -37,7 +54,6 @@ export const CountryDescriptionContainer = styled.div`
 
   .img-div {
     width: 45%;
-
     img {
       width: 100%;
       height: 100%;
@@ -70,14 +86,53 @@ export const CountryDescriptionContainer = styled.div`
       }
     }
 
-    .border-countries {
-      font-size: 0.8rem;
-      .border-countries {
+    .border-countries-div {
+      font-size: 0.6rem;
+      line-height: 2rem;
+      .border-countries-sigla {
         font-weight: 400;
         padding: 0.2rem 0.8rem;
         margin: 0 0.5rem;
         border-radius: 5px;
-        box-shadow: 0.2px 0.2px 5px #2b394541;
+        box-shadow: 0.2px 0.2px 4px hsl(209, 23%, 22%);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .img-div {
+      width: 50%;
+    }
+
+    .country-description {
+      width: 80%;
+      padding: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .img-div {
+      width: 80%;
+    }
+
+    .country-description {
+      padding: 1rem;
+      .country-info {
+        p {
+          font-size: 0.8rem;
+          line-height: 1.2rem;
+        }
+      }
+      .border-countries-div {
+        font-size: 0.5rem;
+        line-height: 1.5rem;
+        .border-countries-sigla {
+          font-size: 0.45rem;
+        }
       }
     }
   }
@@ -127,12 +182,12 @@ export const CountryDescriptionCard = ({ country }) => {
             </span>
           </p>
         </div>
-        <div className='border-countries'>
+        <div className='border-countries-div'>
           <h2>
             Border Countries:
             <span>
               {country.borders?.map((bordersCountries, i) => (
-                <span key={i} className='border-countries'>
+                <span key={i} className='border-countries-sigla'>
                   {' '}
                   {bordersCountries}{' '}
                 </span>
