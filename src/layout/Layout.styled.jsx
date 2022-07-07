@@ -16,6 +16,20 @@ export const HeaderContainer = styled.header`
   .page-title {
     font-size: 1.7rem;
   }
+
+  @media only screen and (max-width: 768px) {
+    padding: 1rem 2rem;
+    .page-title {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .page-title {
+      font-size: 0.9rem;
+    }
+    padding: 1rem 2rem;
+  }
 `;
 
 export const HeaderButton = styled.button`
@@ -30,6 +44,14 @@ export const HeaderButton = styled.button`
   .moon-icon {
     margin-right: 0.5rem;
     font-size: 1.05rem;
+  }
+
+  @media only screen and (max-width: 425px) {
+    padding: 0.3rem;
+    .moon-icon {
+      margin-right: 0.3rem;
+      font-size: 0.9rem;
+    }
   }
 `;
 

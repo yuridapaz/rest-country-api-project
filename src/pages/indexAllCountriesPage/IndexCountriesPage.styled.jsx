@@ -9,7 +9,7 @@ export const Body = styled.div`
 `;
 
 export const Cointainer = styled.div`
-  max-width: 1280px;
+  width: 100%;
   padding: 2rem;
   margin-top: 3.5rem;
   a {
@@ -21,7 +21,12 @@ export const Cointainer = styled.div`
 export const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin: 0 2rem 2rem 2rem;
+
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+    margin: 0;
+  }
 `;
 
 export const Input = styled.input`
@@ -41,6 +46,15 @@ export const Input = styled.input`
   :-ms-input-placeholder {
     color: ${({ theme }) => theme.text};
   }
+
+  @media only screen and (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 425px) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Select = styled.select`
@@ -52,26 +66,27 @@ export const Select = styled.select`
   &:focus {
     outline: none;
   }
+
+  @media only screen and (max-width: 425px) {
+    width: 50%;
+  }
 `;
 
-// export const SelectForm = () => {
-//   return (
-//     <Select>
-//       <option value='' hidden>
-//         Filter by Region
-//       </option>
-//       <option value='africa'>None</option>
-//       <option value='africa'>Africa</option>
-//       <option value='america'>América</option>
-//       <option value='asia'>Asia</option>
-//       <option value='europe'>Europe</option>
-//       <option value='oceania'>Oceania</option>
-//     </Select>
-//   );
-// };
-
 export const CardsContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+
+  @media only screen and (max-width: 1024px) {
+    gap: 1rem;
+  }
+
+  @media only screen and (max-width: 425px) {
+    padding: 1.7rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
 `;

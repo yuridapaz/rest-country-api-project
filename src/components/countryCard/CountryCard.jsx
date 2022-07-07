@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  width: 240px;
+  width: 220px;
   box-shadow: ${({ theme }) => theme.boxShadow};
   border-radius: 5px;
+
   .image--div {
     width: 100%;
     height: 140px;
@@ -18,26 +19,64 @@ export const CardContainer = styled.div`
   }
 
   .content--div {
-    padding: 1.5rem 1rem 2rem 1rem;
+    padding: 1rem;
     background-color: ${({ theme }) => theme.element};
     color: ${({ theme }) => theme.text};
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 
     h1 {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 800;
       margin-bottom: 0.7rem;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.2rem;
     }
 
     span {
       font-weight: 300;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 180px;
+    .image--div {
+      height: 100px;
+    }
+
+    .content--div {
+      /* padding: 1rem; */
+      padding: 2rem;
+
+      h1 {
+        font-size: 0.8rem;
+      }
+
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    width: 100%;
+
+    .image--div {
+      height: 180px;
+    }
+
+    .content--div {
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   }
 `;
