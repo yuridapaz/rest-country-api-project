@@ -24,7 +24,7 @@ Your users should be able to:
 - [x] Create a detailed page with a clicked country information
 - [ ] Create a detailed page with a clicked border country information
 - [x] Set a Light/Dark theme mode
-- [ ] Create a responsive design
+- [x] Create a responsive design
 
 ### Extra
 
