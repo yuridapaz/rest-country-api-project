@@ -19,11 +19,11 @@ Your users should be able to:
 
 - [x] Use styled-compnents
 - [x] Show all countries from the API
-- [ ] Search for a country name using an `input`
-- [ ] Set a select field that filter countries by region
-- [ ] Create a detailed page with a clicked country information
+- [x] Search for a country name using an `input`
+- [x] Set a select field that filter countries by region
+- [x] Create a detailed page with a clicked country information
 - [ ] Create a detailed page with a clicked border country information
-- [ ] Set a Light/Dark theme mode
+- [x] Set a Light/Dark theme mode
 - [ ] Create a responsive design
 
 ### Extra
